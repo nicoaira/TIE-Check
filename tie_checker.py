@@ -4,6 +4,8 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+print("iniciado")
+
 # Email configuration
 sender_email = 'nicolas.aira@hotmail.com'
 receiver_email = 'naira@uic.es'
