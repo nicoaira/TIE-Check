@@ -18,6 +18,8 @@ smtp_port = 587
 url = "https://icp.administracionelectronica.gob.es/icpplustieb/citar?p=8&locale=es"
 text_to_check = "En este momento no hay citas disponibles en esta sede"
 
+print("check0")
+
 response = requests.get(url,headers={
    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}, verify=False)
 
