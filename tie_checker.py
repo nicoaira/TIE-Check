@@ -16,13 +16,18 @@ smtp_server = 'smtp-mail.outlook.com'
 smtp_port = 587
 
 url = "https://icp.administracionelectronica.gob.es/icpplustieb/citar?p=8&locale=es"
-text_to_check = "En este mmento no hay citas disponibles en esta sede"
+text_to_check = "En este momento no hay citas disponibles en esta sede"
 
 response = requests.get(url,headers={
    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"}, verify=False)
 
+print("check1")
+
+
 while True:
     if text_to_check not in response.text:
+        print("check2")
+
         print("El texto desaparecio!")
 
         # Create the email message
@@ -63,5 +68,6 @@ while True:
         break
 
     else:
+        print("check2")
         print("Sin cambios, chequeando nuevamente en 10 segundos...")
         time.sleep(10)
